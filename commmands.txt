@@ -1,0 +1,60 @@
+install python
+apt-get isntall python3
+pip3 install virtualenv
+pip install uvicorn
+pip install fastapi
+pip install sqlalchemy
+pip install psycopg2
+
+install postgres
+apt install  postgresql postgresql-contrib -y
+psql --version
+psql -U postgres
+
+
+start fastapi server
+uvicorn app.main:app --reload
+
+setup virtual environment
+py -3 -m venv venv
+
+start virtual environment
+fastvenv\Scripts\activate.bat
+
+setup database connection
+
+pip install -r requirements.txt
+
+
+#to clean up and reinstall uvicorn
+deactivate
+rmdir /s /q fastvenv
+python -m venv fastvenv
+fastvenv\Scripts\activate.bat
+python -m pip install --upgrade pip
+python -m pip install uvicorn fastapi
+pip install sqlalchemy
+pip install psycopg2
+pip install passlib[bcrypt]
+pip install pydantic[email]
+pip install python-jose[cryptography]
+pip install bcrypt==3.2.2
+pip install python-multipart
+pip install alembic
+
+
+#alembic commands
+
+alembic --help
+alembic init
+alembic init --help
+alembic init alembic
+alembic --help
+alembic revision --help
+alembic revision -m "create posts table"
+alembic current
+alembic revision d05c6436db04
+alembic upgrade d05c6436db04
+alembic revision -m "add colum to post table"
+
+
