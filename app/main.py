@@ -9,8 +9,6 @@ from .routers import post, user, auth, vote
 
 models.Base.metadata.create_all(bind=engine)
 
-#Advik Samadhan Patil
-
 app = FastAPI()
 
 origins = ["https://www.google.com"]
